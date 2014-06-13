@@ -13,38 +13,36 @@ Data would be imported manually using JOSM. Existing roads and paths would be mo
 + .shp file was converted to .osm file using JOSM
 + Tag values were modified using [sed script](https://github.com/Mashin6/CThikingtrails/blob/master/convert_script.sh)
 
-*Conversion of tags:*
+*Conversion of tags (see original metadata):*
 
-    OBJECTID        removed
-    TRAILSYSID      removed
-    TRAILNAME       changed to  name= + highway=path
-    ROADNAME        changed to  name= + highway=road
-    TRAILCLASS
-    TRAILSURF
-    TRAILSTAT
-    PUBACCESS
-    HIKE
+    OBJECTID                    removed
+    TRAILSYSID                  removed
+    TRAILNAME                   changed to  name= + highway=path
+    ROADNAME                    changed to  name= + highway=road
+    TRAILCLASS                  changed to DEEP:TRAILCLASS
+    TRAILSURF                   
+    TRAILSTAT                   changed to DEEP:TRAILSTAT
+    PUBACCESS=true/false        changed to access=yes/no
+    HIKE=true/false             changed to foot=yes/no       
     WALK
     RUN
-    INLINSKATE
-    BIKE
-    MTNBIKE
-    MOTORBIKE
-    ALLTERVEH
-    SNOWMOBILE
-    CROSSCSKI
-    EQUESTRIAN
-    ADAACCESS
-    DOGLEASH
-    DOGUNLEASH
-    NATURTRAIL
-    TIMEPERIOD
-    HORIZACCUR
-    SPECIALPERMIT
-    TRAILCOMMENTS
-    TRAILMARK
-    SHAPE          removed
-    SHAPE.len      removed
+    INLINSKATE=true/false       changed to inline_skates=yes/no
+    BIKE=true/false             changed to bicycle=yes/no
+    MTNBIKE=true/false          changed to mtb:access=yes/no
+    MOTORBIKE=true/false        changed to motorcycle=yes/no
+    ALLTERVEH=true/false        changed to atv=yes/no
+    SNOWMOBILE=true/false       changed to snowmobile=yes/no
+    CROSSCSKI=true/false        changed to ski:nordic=yes/ removed
+    EQUESTRIAN=true/false       changed to horse=yes/no
+    ADAACCESS=true/false        changed to wheelchair=yes/no
+    DOGLEASH=true/false         changed to dog=leashed/no
+    DOGUNLEASH                  removed (no True value)
+    NATURTRAIL                  changed to DEEP:NATURTRAIL
+    TIMEPERIOD                  removed
+    HORIZACCUR                  removed
+    TRAILMARK                   changed to DEEP:TRAILMARK
+    SHAPE                       removed
+    SHAPE.len                   removed
  
 
 ## Accuracy
