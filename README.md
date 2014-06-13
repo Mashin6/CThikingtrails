@@ -20,7 +20,23 @@ Data would be imported manually using JOSM. Existing roads and paths would be mo
     TRAILNAME                   changed to  name= + highway=path
     ROADNAME                    changed to  name= + highway=road
     TRAILCLASS                  changed to DEEP:TRAILCLASS
-    TRAILSURF                   
+    TRAILSURF                   changed to surface=
+        Soil                changed to earth
+        Paved               changed to paved
+        Paved Road          changed to paved
+        Unpaved             changed to unpaved
+        Stone               changed to pebblestone
+        Bordwalk            changed to wood
+        Stone Dust          changed to fine_gravel
+        Gravel              changed to gravel
+        Concrete            changed to concrete
+        Asphalt             changed to asphalt
+        Crushed Aggregate   changed to fine_gravel
+        Bituminous          changed to asphalt
+        Stairs              changed to higway=steps
+        Timber Plan         changed to wood
+        Aggregate           changed to fine_gravel
+        
     TRAILSTAT                   changed to DEEP:TRAILSTAT
     PUBACCESS=true/false        changed to access=yes/no
     HIKE=true/false             changed to foot=yes/no       
