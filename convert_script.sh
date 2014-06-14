@@ -41,7 +41,6 @@
 	s/Asphalt/asphalt/g
 	s/Crushed Aggregate/fine_gravel/g
 	s/Bituminous/asphalt/g
-	s/Stairs/asphalt/g
 	s/Timber Plan/wood/g
 	s/Aggregate/fine_gravel/g
 
@@ -59,11 +58,14 @@
 	s/True/yes/g
 }
 
+# All HIKE=False have WALK or RUN = True. Therefore convert everything to "yes".
 /'HIKE'/{
 	s/HIKE/foot/g
-	s/False/no/g
+	s/False/yes/g
 	s/True/yes/g
 }
+/'WALK'/d
+/'RUN'/d
 
 /'BIKE'/{
 	s/BIKE/bicycle/g
@@ -123,11 +125,10 @@ s/NATURTRAIL/DEEP:NATURTRAIL/g
 
 # unused for deleting
 
-/'WALK'/d
+
 /'TRAILSYSID'/d
 /'TIMEPERIOD'/d
 /'SHAPE_len'/d
-/'RUN'/d
 /'HORIZACCUR'/d
 /'CROSSCSKI'/d
 /DOGUNLEASH/d
