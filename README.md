@@ -13,6 +13,7 @@ Data will be imported manually using JOSM. New roads/paths will be connected to 
 ### Trail relations
 During import process, paths and roads with same name and deep:trailmark tags will be grouped into hiking route relations accroding to [tagging scheme](http://wiki.openstreetmap.org/wiki/WikiProject_United_States_Long_Distance_Trails#Tagging).
 Name and deep:trailmark tags will be transferred from paths to relations.
+Color info from deep:trail mark will be used to create color= tag.
 deep:reviewed=no will be added to each relation. (Upon on-site survey and adding valid osmc:symbol tag, deep:reviewed tag can be removed).
 
 ### Known Issues
