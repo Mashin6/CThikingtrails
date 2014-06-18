@@ -10,7 +10,10 @@ Converted .osm file (see Data processing) can be downloaded from [here](https://
 ## Import
 Data will be imported manually using JOSM. New roads/paths will be connected to existing paths. Existing roads and paths would be modified to higher accuracy of the DEEP data. (In case the existing data in OSM will be found very inaccurate, whole segments might be replaced with DEEP data.)
 
-During import DEEP:TRAILMARK, DEEP:NATURTRAIL, DEEP:TRAILSTAT, DEEP:TRAILCLASS tags will be used to create hiking route relations accroding to [tagging scheme](http://wiki.openstreetmap.org/wiki/WikiProject_United_States_Long_Distance_Trails#Tagging).
+### Trail relations
+During import process, paths and roads with same name and deep:trailmark tags will be grouped into hiking route relations accroding to [tagging scheme](http://wiki.openstreetmap.org/wiki/WikiProject_United_States_Long_Distance_Trails#Tagging).
+Name and deep:trailmark tags will be transferred from paths to relations.
+deep:reviewed=no will be added to each relation. (Upon on-site survey and adding valid osmc:symbol tag, deep:reviewed tag can be removed).
 
 ### Known Issues
 + Some of the paths have access=no even though they are marked as hiking trails. Possible error in DEEP data? => need to be investigated on-site
@@ -28,7 +31,7 @@ During import DEEP:TRAILMARK, DEEP:NATURTRAIL, DEEP:TRAILSTAT, DEEP:TRAILCLASS t
     TRAILSYSID                  removed
     TRAILNAME                   changed to  name= + highway=path
     ROADNAME                    changed to  name= + highway=road
-    TRAILCLASS                  changed to DEEP:TRAILCLASS
+    TRAILCLASS                  removed
     TRAILSURF                   changed to surface=
         Soil                changed to earth
         Paved               changed to paved
@@ -46,7 +49,7 @@ During import DEEP:TRAILMARK, DEEP:NATURTRAIL, DEEP:TRAILSTAT, DEEP:TRAILCLASS t
         Timber Plan         changed to wood
         Aggregate           changed to fine_gravel
         
-    TRAILSTAT                   changed to DEEP:TRAILSTAT
+    TRAILSTAT                   removed
     PUBACCESS=true/false        changed to access=yes/no
     HIKE=true/false             changed to foot=yes/no       
     WALK                        changed to foot=yes/no    
@@ -57,15 +60,15 @@ During import DEEP:TRAILMARK, DEEP:NATURTRAIL, DEEP:TRAILSTAT, DEEP:TRAILCLASS t
     MOTORBIKE=true/false        changed to motorcycle=yes/no
     ALLTERVEH=true/false        changed to atv=yes/no
     SNOWMOBILE=true/false       changed to snowmobile=yes/no
-    CROSSCSKI=true/false        changed to ski:nordic=yes/ removed
+    CROSSCSKI=true/false        changed to ski:nordic=yes/ false removed
     EQUESTRIAN=true/false       changed to horse=yes/no
     ADAACCESS=true/false        changed to wheelchair=yes/no
     DOGLEASH=true/false         changed to dog=leashed/no
     DOGUNLEASH                  removed (no True value)
-    NATURTRAIL                  changed to DEEP:NATURTRAIL
+    NATURTRAIL=true/false       changed to education=yes/ false removed
     TIMEPERIOD                  removed
     HORIZACCUR                  removed
-    TRAILMARK                   changed to DEEP:TRAILMARK
+    TRAILMARK                   changed to deep:trailmark
     SHAPE                       removed
     SHAPE.len                   removed
  
