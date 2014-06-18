@@ -29,13 +29,13 @@
 /'TRAILSURF'/{
 	s/TRAILSURF/surface/g
 	s/Soil/earth/g
-	s/Paved/paved/g
 	s/Paved Road/paved/g
-	s/Unpaved/unpaved/g
+	s/Paved/paved/g
 	s/Unpaved Road/unpaved/g
+	s/Unpaved/unpaved/g
+	s/Stone Dust/fine_gravel/g
 	s/Stone/pebblestone/g
 	s/Boardwalk/wood/g
-	s/Stone Dust/fine_gravel/g
 	s/Gravel/gravel/g
 	s/Concrete/concrete/g
 	s/Asphalt/asphalt/g
@@ -118,10 +118,14 @@
 
 s/k='CROSSCSKI' v='True'/k='ski:nordic' v='yes'/
 
-s/TRAILSTAT/DEEP:TRAILSTAT/g
-s/TRAILMARK/DEEP:TRAILMARK/g
-s/TRAILCLASS/DEEP:TRAILCLASS/g
-s/NATURTRAIL/DEEP:NATURTRAIL/g
+/TRAILSTAT/d
+s/TRAILMARK/deep:trailmark/g
+/k='deep:trailmark' v='None'/d
+/TRAILCLASS/d
+s/k='NATURTRAIL' v='True'/k='education' v='yes'/g
+/NATURTRAIL/d
+
+
 
 # unused for deleting
 
