@@ -1,5 +1,5 @@
-#/<\/way>/ i\
-#<tag k='source' v='DEEP' \/>
+/<\/way>/ i\
+<tag k='deep:reviewed' v='no' \/>
 
 /'TRAILNAME'/{
 	s/TRAILNAME/name/g
