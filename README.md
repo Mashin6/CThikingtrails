@@ -10,6 +10,8 @@ Converted .osm file (see Data processing) can be downloaded from [here](https://
 ## Import
 Data will be imported manually using JOSM. New roads/paths will be connected to existing paths. Existing roads and paths would be modified to higher accuracy of the DEEP data. (In case the existing data in OSM will be found very inaccurate, whole segments might be replaced with DEEP data.)
 
+Each path/road segment will have 'deep:reviewed=no' tag, which will be removed after resurvey.
+
 ### Trail relations
 During import process, paths and roads with same name and deep:trailmark tags will be grouped into hiking route relations accroding to [tagging scheme](http://wiki.openstreetmap.org/wiki/WikiProject_United_States_Long_Distance_Trails#Tagging).
 Name and deep:trailmark tags will be transferred from paths to relations.
@@ -72,8 +74,9 @@ deep:reviewed=no will be added to each relation. (Upon on-site survey and adding
     TRAILMARK                   changed to deep:trailmark
     SHAPE                       removed
     SHAPE.len                   removed
- 
 
+    Added tag                   deep:reviewed=no
+    
 ## Accuracy
 According to the 'HORIZACCUR' tag associated with each trail, the accuray varies depending on GPS device used from 1m to 10m.
 
